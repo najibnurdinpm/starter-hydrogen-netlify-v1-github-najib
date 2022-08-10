@@ -1,16 +1,15 @@
 import {useEffect, useRef} from 'react';
-// import { gsap } from "gsap";
 import { gsap, TimelineLite, Power3 } from 'gsap';
-import {ScrollTrigger} from 'gsap/dist/ScrollTrigger'
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 
 
 import {Link} from '@shopify/hydrogen/client';
 export function Herocontent() {
-
-    const boxRef = useRef();
-
-    useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);      
+  
+  const boxRef = useRef();
+  
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);      
       gsap.to(".sec-heroContent", {
         scrollTrigger: {
           trigger: ".sec-heroContent",
