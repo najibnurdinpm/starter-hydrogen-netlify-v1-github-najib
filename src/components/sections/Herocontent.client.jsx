@@ -1,8 +1,6 @@
 import {useEffect, useRef} from 'react';
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
-
-
 import {Link} from '@shopify/hydrogen/client';
 export function Herocontent() {
   
@@ -10,16 +8,17 @@ export function Herocontent() {
   
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);      
-      gsap.to(".sec-heroContent", {
-        scrollTrigger: {
-          trigger: ".sec-heroContent",
-          start: "top center",
-          ent : "top 100px",
-          scrub: true,
-        },
-        opacity:1,
-        duration: 3
-      })
+    console.log('ScrollTrigger', ScrollTrigger)
+      // gsap.to(".sec-heroContent", {
+      //   scrollTrigger: {
+      //     trigger: ".sec-heroContent",
+      //     start: "top center",
+      //     ent : "top 100px",
+      //     scrub: true,
+      //   },
+      //   opacity:1,
+      //   duration: 3
+      // })
     }, []);
 
     return (
